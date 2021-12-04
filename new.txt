@@ -1,0 +1,4 @@
+MESA_GL_VERSION_OVERRIDE=3.3 obs
+sudo modprobe v4l2loopback
+sudo python3 /home/pi/Desktop/human_track.py
+

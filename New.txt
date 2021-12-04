@@ -1,0 +1,19 @@
+if posx < 160-xthresh:
+        #print("LEFT")
+        s1 = (160-xthresh) - posx
+            
+        pan_abs -= int(30000*(1+4*(s1/(160-xthresh))**2))
+            
+            
+            
+    if posx > 160+xthresh:
+        #print("LEFT")
+        s1 = posx-(160+xthresh)
+            
+        pan_abs += int(30000*(1+4*(s1/(160-xthresh))**2))
+            
+            
+            
+        
+        string = 'sudo v4l2-ctl --set-ctrl pan_absolute=' + str(pan_abs) + ' --device /dev/video0'
+        os.system(string)
